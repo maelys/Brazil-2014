@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>Leader Board</title>
+<!-- <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,100' rel='stylesheet' type='text/css'> -->
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,200,100' rel='stylesheet' type='text/css'>
+<style>
+body {
+    padding:0px;
+    margin:0px;
+    background-image:url('stadium2.jpg');
+    background-repeat:no-repeat;
+    background-size:0px 0px;
+    /*font-family: 'Source Sans Pro', sans-serif;*/
+    font-family: 'Raleway', sans-serif;
+}
+
+div {
+    box-sizing:border-box;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box; 
+    //border: 1px solid gray;
+}
+
+.scores {
+    width:700px;
+    margin: auto;
+}
+
+.score_title {
+    text-align:center;
+    font-size:350%;
+    border-top: 2px solid green;
+    border-bottom: 2px solid green;
+    padding:20px;
+    margin-top: 20px;
+    color:white;
+    letter-spacing: 20px;
+    font-weight:100;
+}
+
+.score {
+    display:table;
+    width: 70%;
+    margin:auto;
+    margin-top: 30px;
+    border-radius: 5px;
+    height:60px;
+    border: 1px solid lightgray;
+    background: white;
+}
+
+.score_left, .score_right {
+    display:table-cell;
+    //border-radius: 0px 5px 0px 5px;
+    //float:left;
+    width:80%;
+    height:100%;
+    padding:5px;
+    color: gray;
+    vertical-align:middle;
+    font-size: 150%;
+}
+
+.score_left {
+    padding-left: 10px;
+}
+
+.score_right {
+    width:20%;
+    text-align:center;
+    vertical-align:middle;
+    font-size: 200%;
+    border-left: 1px solid lightgray;
+    //background: lightgreen;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="scores">
+
+<div class="score_title">Leader Board.</div>
+
+{% for r in results %}
+    <div class="score"> <div class="score_left">{{ r }}</div> <div class="score_right">{{ results[r] }}</div> </div>
+{% endfor %}
+
+
+</div>
+
+</body>
+
+<script>
+    document.body.style.backgroundSize=window.innerWidth+"px " + window.innerHeight + "px";
+</script>
+
+</html>
