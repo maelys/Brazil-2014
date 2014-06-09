@@ -1,0 +1,15 @@
+A small app to count the points for a contest about the FIFA World Cup in Brazil.
+Each participant choses 8 Teams and get points eveytime they win a game.
+Teams don't have the same weight.
+
+1 point/win     2 points/win    3 points/win    5 points/win    7 points/win
+Spain           Italy           Russia          Costa Rica      Japan
+Germany         Greece          Mexico          Iran            Cameroon
+Portugal        England         Croatia         Ghana           Korea Republic
+Brazil          Belgium         Ivory Coast     Nigeria         Australia
+Colombia        Chile           Bosnia-Herz     
+Uruguay         USA             Algeria     
+Argentina       Netherlands     Ecuador     
+Switzerland     France          Honduras        
+
+Points are stored in a SQLite DB and results are accessible via a minimalist website
